@@ -1,0 +1,1 @@
+php box.phar build

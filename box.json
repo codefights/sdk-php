@@ -1,0 +1,6 @@
+{
+    "directories": ["boilerplate", "model", "samples"],
+    "stub": true,
+    "main": "MyFighter.php",
+    "output": "my-fighter.phar"
+}
