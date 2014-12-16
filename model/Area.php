@@ -7,12 +7,11 @@
  *
  * @author Mantas Urbonas
  */
-abstract class Area{
-	const NOSE  = 'NOSE';
-	const JAW   = 'JAW';
-	const GROIN = 'GROIN';
-	const BELLY = 'BELLY';
-	const LEGS  = 'LEGS';
+abstract class Area
+{
+    const NOSE  = 'NOSE';
+    const JAW   = 'JAW';
+    const GROIN = 'GROIN';
+    const BELLY = 'BELLY';
+    const LEGS  = 'LEGS';
 }
-
-?>

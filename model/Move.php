@@ -2,52 +2,64 @@
 
 require_once 'Area.php';
 
-class Move {
-	private $attacks = array();
-	private $blocks = array();
-	private $comment;
+class Move
+{
+    private $attacks = array();
+    private $blocks = array();
+    private $comment;
 
-	public function getAttacks() {
-		return $this->attacks;
-	}
+    public function getAttacks()
+    {
+        return $this->attacks;
+    }
 
-	public function getBlocks() {
-		return $this->blocks;
-	}
+    public function getBlocks()
+    {
+        return $this->blocks;
+    }
 
-	public function getComment() {
-		return $this->comment;
-	}
+    public function getComment()
+    {
+        return $this->comment;
+    }
 
-	public function setComment($comment) {
-		$this->comment = $comment;
-		return $this;
-	}
+    public function setComment($comment)
+    {
+        $this->comment = $comment;
 
-	public function addAttack( $area) {
-		array_push($this->attacks, $area);
-    	return $this;
-	}
+        return $this;
+    }
 
-	public function addBlock($area) {
-		array_push($this->blocks, $area);
-    	return $this;
-	}
+    public function addAttack($area)
+    {
+        array_push($this->attacks, $area);
 
-	public function __toString() {
-    	$rez= 'Move ';
+        return $this;
+    }
 
-    	foreach ($this->attacks as $attack)
-    		$rez=$rez.' ATTACK '.$attack;
+    public function addBlock($area)
+    {
+        array_push($this->blocks, $area);
 
-    	foreach ($this->blocks as $block)
-    		$rez=$rez.' BLOCK '.$block;
+        return $this;
+    }
 
-    	if ($this->comment!=null)
-    		$rez=$rez.' COMMENT '.$this->comment;
+    public function __toString()
+    {
+        $rez = 'Move ';
 
-    	return $rez;
-	}
+        foreach ($this->attacks as $attack) {
+            $rez = $rez.' ATTACK '.$attack;
+        }
+
+        foreach ($this->blocks as $block) {
+            $rez = $rez.' BLOCK '.$block;
+        }
+
+        if ($this->comment != null) {
+            $rez = $rez.' COMMENT '.$this->comment;
+        }
+
+        return $rez;
+    }
 }
-
-?>
