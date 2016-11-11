@@ -26,7 +26,7 @@ class MyFighter implements IFighter{
      */
     public function makeNextMove(Move $opponentsLastMove=null, $myLastScore=0, $opponentsLastScore=0){
     	$move = new Move();
-		$move->addAttack(Area::NOSE)->addBlock(Area::GROIN)->addAttack(Area::BELLY);
+		$move->addAttack(Area::NOSE);
     	return $move;
     }
 	
