@@ -20,7 +20,7 @@ class Commentator {
 		$this->lp1 -= $score2;
 		$this->lp2 -= $score1;
 
-		echo("$this->fighter1 vs $this->fighter2: $this->lp1 to $this->lp2\n");
+		echo("$this->fighter1 vs $this->fighter2: $this->lp1 to $this->lp2\n\n");
 	}
 
 	function gameOver( $f1Lifepoints,  $f2Lifepoints) {
