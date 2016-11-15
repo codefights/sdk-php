@@ -54,8 +54,8 @@ class Boxer implements IFighter{
     private static function createRandomAttack() {
         $random = rand(0, 10);
         if ($random>=5)
-            return Area::GROIN;
-        return Area::BELLY;
+            return Area::BELLY;
+        return Area::JAW;
     }
 }
 
